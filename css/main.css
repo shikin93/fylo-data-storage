@@ -1,0 +1,202 @@
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap");
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  font-family: "Raleway", sans-serif;
+  font-size: 14px;
+  background-image: url(../images/bg-mobile.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  color: #dddbff;
+}
+
+span {
+  font-weight: bold;
+}
+
+.container {
+  max-width: 90%;
+  margin: 8em auto;
+}
+
+.container .nav {
+  background-color: #1d2c67;
+  padding: 3em;
+  border-radius: 1em 8em 1em 1em;
+}
+
+.container .nav__logo {
+  padding-bottom: 2em;
+}
+
+.container .nav__component .document,
+.container .nav__component .folder,
+.container .nav__component .upload {
+  display: inline-block;
+  width: 3em;
+  height: 3em;
+  border-radius: 0.5em;
+  margin-right: 0.5em;
+}
+
+.container .nav__component .document {
+  background: #0c122c url(../images/icon-document.svg) no-repeat center;
+}
+
+.container .nav__component .folder {
+  background: #0c122c url(../images/icon-folder.svg) no-repeat center;
+}
+
+.container .nav__component .upload {
+  background: #0c122c url(../images/icon-upload.svg) no-repeat center;
+}
+
+.container .storage {
+  max-width: 100%;
+  background: #1d2c67;
+  padding: 2em;
+  border-radius: 1em;
+  margin-top: 1em;
+  position: relative;
+}
+
+.container .storage p {
+  text-align: center;
+}
+
+.container .storage__bar {
+  max-width: 100%;
+  height: 1.2em;
+  border-radius: 1em;
+  background: #0c122c;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.container .storage__bar--lvl {
+  width: 75%;
+  height: 0.8em;
+  border-radius: 1em;
+  background: -webkit-gradient(linear, left top, right top, from(#ffa399), to(#ff4d97));
+  background: linear-gradient(90deg, #ffa399, #ff4d97);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-left: 0.2em;
+}
+
+.container .storage__bar--lvl .dot {
+  width: 0.8em;
+  height: 0.8em;
+  border-radius: 50%;
+  background-color: white;
+}
+
+.container .storage__used {
+  max-width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 0.5em;
+}
+
+.container .storage__left {
+  position: absolute;
+  background-color: white;
+  padding: 0.5em 1em;
+  border-radius: 0.5em;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  right: 50%;
+  -webkit-transform: translatex(50%);
+          transform: translatex(50%);
+}
+
+.container .storage__left p {
+  display: inline-block;
+  color: #848794;
+  font-weight: bold;
+  margin-left: 0.5em;
+}
+
+.container .storage__left .current {
+  color: #333;
+  font-size: 2.5em;
+  font-weight: bold;
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+
+.attribution a {
+  color: #ffa399;
+}
+
+@media only screen and (min-width: 768px) {
+  body {
+    background: #0c122c url(../images/bg-desktop.png) no-repeat;
+    background-position: 0 140%;
+  }
+  .container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: end;
+        -ms-flex-align: end;
+            align-items: flex-end;
+    margin: 15em auto;
+  }
+  .nav {
+    -webkit-box-flex: 1;
+        -ms-flex: 1;
+            flex: 1;
+  }
+  .storage {
+    -webkit-box-flex: 2;
+        -ms-flex: 2;
+            flex: 2;
+    margin-left: 2em;
+  }
+  .storage__left {
+    top: -2em;
+    right: 7.5em !important;
+  }
+  .storage__left .path {
+    -webkit-clip-path: polygon(100% 0, 0 0, 100% 100%);
+            clip-path: polygon(100% 0, 0 0, 100% 100%);
+    width: 1.5em;
+    height: 1.5em;
+    background-color: white;
+    position: absolute;
+    z-index: 2;
+    top: 3.8em;
+    right: 0;
+  }
+}
+
+@media only screen and (min-width: 1240px) {
+  .container {
+    max-width: 70%;
+  }
+}
+/*# sourceMappingURL=main.css.map */

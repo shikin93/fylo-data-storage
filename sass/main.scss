@@ -1,0 +1,200 @@
+// Primary color
+$gradient: linear-gradient(90deg, hsl(6, 100%, 80%), hsl(335, 100%, 65%));
+
+// Neutral
+$paleBlue: hsl(243, 100%, 93%);
+$grayisBlue: hsl(229, 7%, 55%);
+$darkBlue: hsl(228, 56%, 26%);
+$veryDarkBlue: hsl(229, 57%, 11%);
+
+// Google font
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap");
+
+// Global
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Raleway", sans-serif;
+  font-size: 14px;
+  background-image: url(../images/bg-mobile.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  color: $paleBlue;
+}
+
+span {
+  font-weight: bold;
+}
+
+.container {
+  max-width: 90%;
+  margin: 8em auto;
+
+  .nav {
+    background-color: $darkBlue;
+    padding: 3em;
+    border-radius: 1em 8em 1em 1em;
+
+    &__logo {
+      padding-bottom: 2em;
+    }
+
+    &__component {
+      .document,
+      .folder,
+      .upload {
+        display: inline-block;
+        width: 3em;
+        height: 3em;
+        border-radius: 0.5em;
+        margin-right: 0.5em;
+      }
+
+      .document {
+        background: $veryDarkBlue url(../images/icon-document.svg) no-repeat
+          center;
+      }
+      .folder {
+        background: $veryDarkBlue url(../images/icon-folder.svg) no-repeat
+          center;
+      }
+      .upload {
+        background: $veryDarkBlue url(../images/icon-upload.svg) no-repeat
+          center;
+      }
+    }
+  }
+
+  .storage {
+    max-width: 100%;
+    background: $darkBlue;
+    padding: 2em;
+    border-radius: 1em;
+    margin-top: 1em;
+    position: relative;
+
+    p {
+      text-align: center;
+    }
+
+    &__bar {
+      max-width: 100%;
+      height: 1.2em;
+      border-radius: 1em;
+      background: $veryDarkBlue;
+      display: flex;
+      align-items: center;
+
+      &--lvl {
+        width: 75%;
+        height: 0.8em;
+        border-radius: 1em;
+        background: $gradient;
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        margin-left: 0.2em;
+
+        .dot {
+          width: 0.8em;
+          height: 0.8em;
+          border-radius: 50%;
+          background-color: white;
+        }
+      }
+    }
+
+    &__used {
+      max-width: 100%;
+      display: flex;
+      justify-content: space-between;
+      padding: 0.5em;
+    }
+
+    &__left {
+      position: absolute;
+      background-color: white;
+      padding: 0.5em 1em;
+      border-radius: 0.5em;
+      display: flex;
+      right: 50%;
+      transform: translatex(50%);
+
+      p {
+        display: inline-block;
+        color: $grayisBlue;
+        font-weight: bold;
+        margin-left: 0.5em;
+      }
+
+      .current {
+        color: #333;
+        font-size: 2.5em;
+        font-weight: bold;
+      }
+    }
+  }
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+
+.attribution a {
+  color: hsl(6, 100%, 80%);
+}
+
+// @media only screen and (min-width: 400px) {
+//   body {
+//     background-size: cover;
+//     background-position: center center;
+//   }
+// }
+
+@media only screen and (min-width: 768px) {
+  body {
+    background: $veryDarkBlue url(../images/bg-desktop.png) no-repeat;
+    background-position: 0 140%;
+  }
+
+  .container {
+    display: flex;
+    align-items: flex-end;
+    margin: 15em auto;
+  }
+
+  .nav {
+    flex: 1;
+  }
+
+  .storage {
+    flex: 2;
+    margin-left: 2em;
+
+    &__left {
+      top: -2em;
+      right: 7.5em !important;
+
+      .path {
+        clip-path: polygon(100% 0, 0 0, 100% 100%);
+        width: 1.5em;
+        height: 1.5em;
+        background-color: white;
+        position: absolute;
+        z-index: 2;
+        top: 3.8em;
+        right: 0;
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: 1240px) {
+  .container {
+    max-width: 70%;
+  }
+}
