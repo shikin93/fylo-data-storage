@@ -164,7 +164,7 @@ span {
     -webkit-box-align: end;
         -ms-flex-align: end;
             align-items: flex-end;
-    margin: 15em auto;
+    margin: 18em auto;
   }
   .nav {
     -webkit-box-flex: 1;
@@ -196,7 +196,7 @@ span {
 
 @media only screen and (min-width: 1240px) {
   .container {
-    max-width: 70%;
+    max-width: 65%;
   }
 }
 /*# sourceMappingURL=main.css.map */
